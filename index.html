@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="Us-en">
+<head>
+	<meta name="viewport" name="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript"  src="js/all.js"></script><!--fontawesome -->
+	<script type="text/javascript" src="js/Bootstrap.js"></script>
+	<script type="text/javascript" src="js/jq.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<link rel="icon" href="images/logo.jpg" >
+	<title>DreamGlass</title>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button#close_tags").click(function(){
+		$(this).toggleClass("change");
+	});
+	$(window).scroll(function(){
+		var x = $(this).scrollTop();
+		if(x >= 650){
+			$(".img-customer").addClass("Toright");
+			$(".paragraph-anim").addClass("Toleft");
+		}
+		else{
+			$(".img-customer").removeClass("Toright");
+			$(".paragraph-anim").removeClass("Toleft");	
+		}
+	});
+	$(window).scroll(function(){
+		var  y = $(this).scrollTop();
+		if(y >= 620){
+			$(".bgopacity").addClass("top-navbar-j");
+		}else{
+			$(".bgopacity").removeClass("top-navbar-j");
+		}
+	});
+	$(".custome-line").click(function(){
+		var attributes = $(this).attr('data-filter');
+		if(attributes==='All'){
+			$(".filter").show(300);
+		} else{
+			$(".filter").not("."+attributes).hide(300);
+			$(".filter").filter("."+attributes).show(300);
+		}
+	});
+	$(window).scroll(function(){
+		var x = $(this).scrollTop();
+		if(x >= 5610){
+			$(".card-1").addClass("animsh");
+			$(".card-2").addClass("animsh-1");
+			$(".card-3").addClass("animsh-2");
+		}
+		else
+		{
+			$(".card-1").removeClass("animsh");
+			$(".card-2").removeClass("animsh-1");
+			$(".card-3").removeClass("animsh-2");
+		}
+	});
+});	
+</script>	
+<style>
+	header{
+		height:100vh;
+		background: url("images/b (1).jpg") no-repeat fixed center center /cover;
+	}
+	.banner{
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%); 
+		width: 80%;
+	}
+	.titles{
+		animation:anim 2s;
+	}
+	.paragraph{
+		animation:anim 2s 0.3s backwards;
+	}
+	@keyframes anim{
+		0%{
+			transform: translateX(-100px);
+			opacity:0;
+		}
+		100%{
+			transform: translateX(0px);
+			opacity: 1;
+		}
+	}
+	.motion{
+		transition: all 0.2s;
+		font-size: 28px;
+	}
+	.motion:hover{
+		transition: all 0.2s;
+		color:#666;
+	}
+	.bgopacity{
+		background: rgba(255, 255, 255, .8); 
+		color:  black;
+		transition: all 0.5s;
+	}
+	.top-navbar-j{
+		background: ghostwhite;
+		box-shadow: 0px 0px 3px #ccc;
+	}
+	.li_links{
+		color:black;
+		border-radius: 6px;
+		font-size: 19px;
+		transition: all 0.2s;
+	}
+	.li_links:hover{
+		color: white;
+		box-shadow: 0px 0px 7px #666;
+		background: black;
+	}
+	.x{
+		color:white;
+		transition: all 0.5s;
+	}
+	.x:hover{
+		color:red;
+	}
+	.line1, .line2, .line3{
+		width: 20px;
+		height: 3px;
+		background-color: white;
+		margin:5px;
+		transition:all .4s;
+	}
+	.change .line1{
+		transform: rotate(45deg) translate(6px,6px);
+	}
+	.change .line2{
+		opacity: 0;
+	}
+	.change .line3{
+		transform: rotate(-45deg) translate(5px,-6px)
+	}
+	.Toleft{
+		animation: Toleft .7s;
+	}
+	@keyframes Toleft{
+		0%{
+			transform: scale(0);
+			opacity: 0;
+		}
+		25%{
+			transform: scale(1.2);
+			opacity: .5;
+		}
+		100%{
+			transform: scale(1.0);
+			opacity: 1;
+		}
+	}
+	.Toright{
+		animation: Toright .7s;
+	}
+	@keyframes Toright{
+		0%{
+			transform: scale(0);
+			opacity: 0;
+		}
+		50%{
+			transform: scale(1.3);
+			opacity: .5;
+		}
+		100%{
+			transform: scale(1.0);
+			opacity: 1;
+		}
+	}
+	.head{
+		border:none;
+		/*box-shadow: 4px 5px 20px #222;*/
+	}
+	.img-sub{
+		position:absolute;
+		top:70%;
+		right:0;
+		padding:10px;
+		background-color: #222;
+		opacity: .6;
+		transition: all .7s;
+	}
+	.img-sub:hover{
+		opacity: 1;
+		cursor: pointer;
+	}
+	.custome-line{
+		cursor: pointer;
+		user-select: none;
+	}
+	.bground{
+		background:linear-gradient(rgba(0,0,0,0.5) , rgba(0,0,0,.4)) ,  url("images/m (1).jpeg") no-repeat center /cover;
+		box-shadow: 0px 20px 50px #000;
+	}
+	.bground2{
+		background:linear-gradient(rgba(0,0,0,0.4) , rgba(0,0,0,.3)) ,  url("images/g (9).jpg") no-repeat center /cover;; 
+		box-shadow: 0px 20px 50px #000;
+	}
+	.bground3{
+		background:linear-gradient(rgba(0,0,0,0.4) , rgba(0,0,0,.3)) ,  url("images/m (6).jpg") no-repeat center /cover;;
+		box-shadow: 0px 20px 50px #000;
+	}
+	.links{
+
+		background :#f5593d;
+		width: 115px;
+		border-radius: 30px;
+		margin:auto;
+		transition: all 0.2s;
+	}
+	.links:hover{
+		transform: translateY(-2px);
+	}
+	.animsh{
+		transition: 1s;
+		opacity: 1;
+		animation: animate-1 2s;
+	}
+	@keyframes animate-1{
+		0%{
+			transform: translateX(-100px);
+			opacity: 0;
+		}
+		100%{
+			transform: translateX(0px);
+			opacity: 1;
+		}
+	}
+	.animsh-1{
+		transition: 1s;
+		opacity: 1;
+		animation: animate-2 2s;	
+	}
+	@keyframes animate-2{
+		0%{
+			transform: translateY(-100px);
+			opacity: 0;
+		}
+		100%{
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
+	.animsh-2{
+		transition: 1s;
+		opacity: 1;
+		animation: animate-3 2s;	
+	}
+	@keyframes animate-3{
+		0%{
+			transform: translateX(200px);
+			opacity: 0;
+		}
+		100%{
+			transform: translateX(0px);
+			opacity: 1;
+		}
+	}
+	/* contacts */
+	.contacts{
+		background:linear-gradient(105deg,
+		rgba(10,10,23,.90)0%,
+		rgba(10,10,23,.95) 50%, 
+		transparent 50%),url("images/g (25).jpg") no-repeat fixed center center /cover;
+	}
+	.input{
+		background:transparent;
+		border-color: transparent;
+		border-bottom: 1px solid white;
+		border-radius: 0px; 
+		color:white;
+		transition: all .5s;
+	}
+	.input:focus{
+		background:transparent;
+		border-color: transparent;
+		border-bottom: 1px solid #bb2333; 
+		box-shadow:none;
+		color:white;
+	}
+	.submit-btn{
+		background-color: #f5593d;
+		transition: all .3s;
+	}
+	.submit-btn:focus,.submit-btn:hover{
+		background-color: #ff593d;
+		transform: translateY(-2px);
+	}
+	.label{
+		color:#777;
+		display: block;
+		margin-top: -60px;
+		font-size: 17px;
+		transition: all .4s;
+	}
+	.input:placeholder-shown + .label{
+		transform: translate(20px,20px);
+		opacity: 0;
+		visibility: hidden;
+	}
+	@media (max-width: 992px){
+		.contacts{
+			background:linear-gradient(rgba(10,10,23,.90),rgba(10,10,23,.95));
+		}
+		.contact-form{
+			width:80%;
+			margin:auto;
+		}
+		.cards-edge{
+			width: 70%;
+			margin:auto;
+		}
+	}
+	/* contacts ends */
+	/* FOOTER */
+	.footer-link{
+		color:#eee;
+		text-decoration: none;
+		transition: all .4s;
+	}
+	.footer-link:hover{
+		color:#777;
+		text-decoration: none;
+	}
+	#price{
+		/*background: linear-gradient(#3930b8, rgba(80, 20, 20, 1) 80%) fixed;*/
+		background: ghostwhite;
+	}
+	#gallery{
+		/*background: linear-gradient(#3930b8 10%, #881233 80%) fixed;*/
+		background: ghostwhite;
+	}
+	.our-mission{
+		border-top: 1px dotted #3930b8;
+		background: ghostwhite;
+	}
+	.collection{
+		/*background: linear-gradient(137deg, rgba(0, 0, 30, 1) 0%,rgba(0, 0, 30, 1) 50%, rgba(0, 0, 30, 1) 50%, rgba(0, 0, 30, 1)  100%);*/
+		background:  ghostwhite;
+		padding: 2rem 0rem;
+	}
+	/* end of FOOTER */
+</style>	
+</head>
+<body>
+<!-- header starts -->
+<header id="home">
+<nav class="fixed-top bgopacity navbar navbar-expand-lg">
+	<!-- <a href="#home" class="navbar-brand px-4" style="font-family: papyrus; color: black; font-weight: bold;">DreamGlass</a> -->
+
+	<button id="close_tags" class="nav-button navbar-toggler bg-secondary" data-toggle="collapse" data-target="#mynav"><div class="line1"></div><div class="line2"></div><div class="line3"></div></button>
+	<div class="collapse navbar-collapse" id="mynav">
+		<ul class="navbar-nav">
+			<li class=" text-uppercase nav-item mx-2"><a class="li_links nav-link" href="#home">Home</a></li>
+			<li class="text-uppercase nav-item mx-2"><a class="li_links nav-link " href="#gallery">Gallery</a></li>
+			<li class="text-uppercase nav-item mx-2"><a class="li_links nav-link " href="#subscribe">subscribe</a></li>
+			<li class="text-uppercase nav-item mx-2"><a class="li_links nav-link " href="#price">price</a></li>
+			<!-- <li class="text-uppercase nav-item mx-2" data-toggle="modal" data-target="#signup" ><a class="li_links nav-link " href="#" >sign-up</a></li> -->
+			<li class="text-uppercase nav-item mx-2"><a class="li_links nav-link " href="#aboutus">About</a></li>
+		</ul>
+	</div>
+</nav>	
+		<div class="banner text-md-right text-center">
+			<h1 class="titles display-4 head" style="font-family: papyrus;">Welcome to Dream Glass</h1>
+			<p class="paragraph lead"  style="font-family: papyrus;">Your dreams come true</p>
+		</div>
+</header>
+<!-- header Ends -->
+
+<!-- modal start Part -->
+    <!-- <div class="modal fade" id="signup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Signup here:
+                    </h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" autocomplete="off" placeholder="email" />
+                    <input type="password" class="form-control mb-2" autocomplete="off" placeholder="password" />
+                    <input type="password" class="form-control" autocomplete="off" placeholder="Retype-password" />
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-success" value="SignUp" />
+                    <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signin" >Already Have Account</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- modal End Part -->
+
+<!-- modal start Part -->
+    <!-- <div class="modal fade" id="signin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Sign In here
+                    </h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" autocomplete="off" placeholder="email" />
+                    <input type="password" class="form-control mb-2" autocomplete="off" placeholder="password" />
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-success" value="SignIn" />
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- modal End Part -->
+
+
+
+
+
+
+<!-- title starts-->
+<section class="our-mission py-5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col text-center my-5">
+					<h1 class="display-3 text-uppercase mb-3">Our mission</h1>
+					<div style="width: 200px; margin:auto; border:2px groove black; background-color:black; "></div>
+					<p class="lead mt-4">Serve best quality for our customers that is our main goal, it is not word it is act which make us awesome</p>
+				</div>
+			</div>
+			<div class="row py-5" >
+				<div class="col-md-6 text-center mb-5">
+					<i class="fas fa-cogs text-primary fa-5x mb-3"></i>
+					<h1 class="font-weight-light">Creativity</h1>
+					<p class="lead">Bringing best product according our customer needs.</p>
+				</div>
+		<!-- 		<div class="col-md-4 text-center mb-5">
+					<i class="fas fa-thumbs-up text-danger fa-5x mb-3"></i>
+					<h1 class="font-weight-light">Supports</h1>
+					<p class="lead">no Support</p>
+				</div> -->
+				<div class="col-md-6 text-center mb-5">
+					<i class="far fa-handshake text-primary fa-5x mb-3"></i>
+					<h1 class="font-weight-light">Experiance</h1>
+					<p class="lead">Worked with different kind of company</p>
+				</div>
+			</div>
+		</div>	
+		<div class="container">
+			<div class="row"
+>				<div class="col-lg-5 text-center">
+					<img src="images/logo.jpg" class="img-fluid img-customer rounded-circle" style="width:300px; height: 300px;" >
+				</div>
+				<div class="col-lg-7 text-center paragraph-anim">
+				<h1>The standard protocol</h1><br>	
+					<p class="lead">
+						Dream glass is a Canadian company that specialist in custom glass showers
+						including frameless glass shower exclosures, glass railings painted galss back splash and custom mirrors. our 
+						products and services ensuure excellent quality, design and style. We also offer free estimates, affordable pricing and 3 year warranty on installation for our valuable customers. We also offer our best quiality hardware in the market to our 
+						client
+					</p>
+				</div>
+			</div>
+		</div>
+</section>
+<!-- Camera animation Ends -->
+<!-- photo collectionn starts -->
+<section class="collection">
+		<div class="container-fluid pt-5">	
+			<div class="row text-center">
+				<div class="col">
+					<h1 class=" font-weight-light">Collection</h1>
+					<hr style="width: 130px; background-color: black; height: 3px;">
+					<p class="lead ">
+						We are here to help people to have best quality products 
+						, You can watch our product models here
+					</p>
+				</div>
+			</div>
+			<div class="row pt-5 justify-content-center">
+				<div class="col-lg-4  mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/m (15).jpg" class=" card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Stair</h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/m (6).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Mirror </h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/m (11).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Stair </h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/m (14).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Stair </h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/m (5).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Stair </h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/m (12).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Stair </h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/g (6).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Bathroom Shower </h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/g (7).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">Fashion style</h5>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3 col-sm-6">
+					<div class="card head">
+							<img src="images/g (8).jpg" class="card-img">
+						<div class="card-img-overlay">
+							<h5 class="img-sub text-white">glass Windows & doors</h5>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>	
+</section>
+
+<!-- photo collection Ends-->
+<!-- photo khezak starts-->
+<section id="gallery" class="pb-5">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col text-center mt-5">
+					<h1 class="display-3">Gallary</h1>	
+					<hr style="width: 160px; background-color: gray; height: 5px;">
+					<p class="lead">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div>
+			</div>
+			<ul class="list-inline text-center py-5">
+				<li class="list-inline-item custome-line" data-filter="All" >All<span class="mx-5" >/</span></li>
+				<li class="list-inline-item custome-line" data-filter="New" >New<span class="mx-5" >/</span></li>
+				<li class="list-inline-item custome-line" data-filter="home" >Home<span class="mx-5" >/</span></li>
+				<li class="list-inline-item custome-line" data-filter="Pro" >Pro</li>
+			</ul>
+			<div class="container-fluid">
+				<div class="d-flex flex-wrap justify-content-center">
+					<div class="filter home"><img src="images/g (2).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter New"><img src="images/g (3).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (4).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter home"><img src="images/g (5).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter home"><img src="images/g (6).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter home"><img src="images/g (7).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter home"><img src="images/g (8).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter New"><img src="images/g (9).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (10).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter New"><img src="images/g (11).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (12).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (13).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter New"><img src="images/g (14).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (15).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (16).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (17).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (19).jpeg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (20).jpeg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (22).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (23).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+					<div class="filter Pro"><img src="images/g (24).jpg" style="width:300px; height: 300px; margin: 3px; border-radius: 5px;"></div>
+				</div>
+			</div>
+		</div>
+</section>
+<!-- photo khezak Ends-->
+<!-- start of gallary -->
+<section>
+	<div class="container-fluid" style="background-color: #111;">
+		<div class="row">
+			<div class="col-sm-6 mx-auto text-white text-center my-3">
+				<h1 class="display-4 mt-5">Happy customers</h1>
+				<hr class="mt-4" style="background-color:#bbb; height: 5px; width: 260px;">
+				<p class="lead text-uppercase mt-5">
+					Our hope is to our customers find best quality and needed products for thesmselves.
+				</p>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-6 mx-auto">
+				<div class="carousel slide" data-ride="carouse" id="carousel-item">
+					<div class="carousel-indicators">
+						<li class="active" data-target="#carousel-item" data-slide-to="0"></li>
+						<li data-target="#carousel-item" data-slide-to="1"></li>
+						<li data-target="#carousel-item" data-slide-to="2"></li>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active text-center">
+							<img src="images/g (18).png" alt="pic here" class="m-5 text-center img-fluid rounded-circle text-light" width="150px">
+							<blockquote class="blockquote text-light">
+								{Comments here} 
+							</blockquote>	
+							<h5 class="text-light text-uppercase mb-5">{Name}</h5>
+							<ul class="list-inline">
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+							</ul>
+						</div>	
+						<div class="carousel-item text-center">
+							<img  src="images/g (18).png" alt="pic here" class="m-5 text-center img-fluid rounded-circle text-light" width="150px">
+							<blockquote class="blockquote text-light">
+									{Comments here} 
+							</blockquote>	
+							<h5 class="text-light text-uppercase mb-5">{Name}</h5>
+							<ul class="list-inline">
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+							</ul>
+						</div>
+						<div class="carousel-item text-center">
+							<img src="images/g (18).png" alt="pic here" class="m-5 text-center img-fluid rounded-circle text-light" width="150px">
+							<blockquote class="blockquote text-light">
+									{Comments here} 
+							</blockquote>	
+							<h5 class="text-light text-uppercase mb-5">{Name}</h5>
+							<ul class="list-inline">
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+								<li class="list-inline-item mb-5">
+									<i class="fas fa-star text-warning"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Ends of gallary -->
+<!-- start of pricing -->
+<section class="pb-5" id="price">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col text-center mt-5">
+				<h1 class="display-3">Buy Here</h1>	
+				<hr style="width: 260px; background-color: gray; height: 5px;">
+				<p class="lead">Roughly estimate prices</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 cards-edge text-center text-light">
+				<div class="card bground m-4 card-1">
+					<h5 class="font-weight-bold my-5">Shower Glass</h5>
+					<h3 class="display-4 font-weight-bold">$35</h3>
+
+					<ul class="list-unstyled">
+						<li class="py-3 border-bottom w-50 m-auto">per square feet</li>
+						<li class="py-3 border-bottom w-50 m-auto">thickness <br /> 10mm</li>
+						<li class="my-4 links"><a href="mailto://mama@gamil.com" class="btn text-light">Contact me!</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 cards-edge text-center">
+				<div class="card bground2 text-light m-4 card-2">
+					<h3 class="my-5">Railing glass</h3>
+					<h3 class="display-4 font-weight-bold">$250</h3>
+
+					<ul class="list-unstyled">
+						<li class="py-3 border-bottom w-50 m-auto">per linear feet</li>
+						<li class="py-3 border-bottom w-50 m-auto">thickness <br /> 12mm</li>
+						<li class="my-4 links"><a href="mailto://mama@gamil.com" class="btn text-light">Contact me!</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 cards-edge text-center">
+				<div class="card bground3 text-light m-4 card-3">
+					<h5 class="font-weight-bold my-5">Mirrors</h5>
+					<h3 class="display-4 font-weight-bold">$16</h3>
+
+					<ul class="list-unstyled">
+									<li class="py-3 border-bottom w-50 m-auto">per square feet</li>
+						<li class="py-3 border-bottom w-50 m-auto">thickness <br /> 5mm</li>
+						<li class="my-4 links"><a href="mailto://mama@gamil.com" class="btn text-light">Contact me!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="my-5 text-center">
+			<h1>Thanks for shopping!</h1>
+			<i class="mt-3 fas text-light fa-coffee fa-3x"></i>
+		</div>
+	</div>
+</section>
+<!-- End of pricing -->
+<!-- CONTACT -->
+<section class="contacts p-5" id="subscribe">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-5 pb-4">
+				<h3 class="display-4 text-white">Get In Touch</h3>
+				<form class="contact-form">
+					<div class="form-group py-5">
+						<input type="email" class="form-control input" placeholder="Email" />
+						<label for="email" class="label">Email Address</label>
+					</div>
+					<div class="form-group pb-3">
+						<input type="text" class="form-control input" placeholder="message//" />
+					</div>
+					<a href="mailto:example@gmail.com" class="btn btn-block p-2 submit-btn font-weight-bold">Message</a>
+				</form>
+			</div>
+		</div>	
+	</div>
+</section>
+<!-- end of contact -->
+<!-- Footer starts -->
+<section class="p-5" style="background-color: rgba(0, 0, 20, .99);">
+		<div class="container-fluid">
+			<div class="row" id="aboutus">
+				<div class="col-lg-4 col-sm-6 text-white">
+					<h3>About us</h3>
+					<p class="small">
+						Dream glass is a Canadian company that specialist in custom glass showers including frameless glass shower exclosures, glass railings painted galss back splash and custom mirrors. our products and services ensuure excellent quality, design and style. We also offer free estimates, affordable pricing and 3 year warranty on installation for our valuable customers. We also offer our best quiality hardware in the market to our client
+					</p>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<h3 class="text-light" >Visit Us</h3>
+						<ul class="list-unstyled">		
+							<li class="list-inline-item"><a href="https://www.facebook.com/showersglass/"><i class="fab fa-facebook fa-2x text-primary"></i></a></li>
+							<li class="list-inline-item"><a href="https://dreamglassshower@gmail.com"><i class="fab fa-google-plus fa-2x text-danger"></i></a></li>
+							<!-- <li class="list-inline-item"><a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.twitter.com"><i class="fab fa-twitter fa-2x text-primary"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.youtube.com"><i class="fab fa-youtube fa-2x text-danger"></i></a></li> -->
+						</ul>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<h3 class="text-light" >Need Help?</h3>
+						<ul class="list-unstyled">
+							<li class="text-light">Address: Nik Noori 6481  Sapling trail mississauga</li>
+							<li class="text-light">Call here:<span> +1 647-223-2009 <i class="fas fa-phone" ></i></span></li>
+							<li><a href="mailto://dreamglassshower@gmail.com" class="text-info">dreamglassshower@gmail.com</a></li>
+						</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<hr style="width: 90%; background-color:white;">
+					<span class="d-block text-light font-weight-light text-center">&copyCopyright 2022.All Rights Reserved</span>
+				</div>
+			</div>
+		</div>
+</section>
+<!-- Footer Ends -->
+</body>
+</html>
